@@ -1,0 +1,98 @@
+body {
+    font-size: 100%;
+    font-family: Monaco, Consolas, "Bitstream Vera Sans Mono", Courier, monospace;
+    line-height: 1.8;
+    background: url("./background.jpg");
+    color: #89b;
+    margin: 0;
+    padding: 2em 0;
+}
+
+a:link {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #334;
+}
+
+a:visited {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #223;
+}
+
+a:hover {
+    border-bottom: 1px solid #fff;
+}
+
+a:visited:hover {
+    border-bottom: 1px solid #fff;
+}
+
+#header {
+    background: #0b0d16 url('./fleur-de-lis-32.png') no-repeat 8px 50%;
+    padding-left: 48px;
+    margin-bottom: 2em;
+}
+
+#body {
+    padding: 0 48px;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 1em;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+span.sub {
+    color: #789;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 1em;
+    color: #fff;
+    margin-top: 2em;
+    margin-bottom: 0;
+}
+
+address {
+    font-style: normal;
+}
+
+#profile dt {
+    float: left;
+    color: #567;
+}
+
+#profile dd {
+    margin-left: 5em;
+}
+
+#profile dd a:link,
+#profile dd a:visited {
+    color: #fd3;
+}
+
+#projects dt {
+    float: left;
+    margin-right: 1em;
+}
+
+#projects dd {
+    margin-left: 1em;
+}
+
+#projects dt a:link,
+#projects dt a:visited {
+    color: #f6b;
+}
+
+.note {
+    color: #445;
+}
+
+p.note {
+    margin: 0;
+}

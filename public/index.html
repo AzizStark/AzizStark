@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AzizStark</title>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/6.3.4/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/6.3.4/firebase-auth.js"></script>
+  <script defer src="/__/firebase/6.3.4/firebase-database.js"></script>
+  <script defer src="/__/firebase/6.3.4/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/6.3.4/firebase-storage.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+  <link rel="stylesheet" type="text/css" href="./styles.css" media="screen">
+
+</head>
+
+<body>
+
+  <div id="header">
+    <h1>Aziz Stark</h1>
+    <span class="sub">Programmer + Designer</span>
+  </div>
+  <div id="body">
+    <dl id="profile">
+      <dt>www</dt>
+      <dd><a href="http://azizstark.web.app">azizstark.web.app</a></dd>
+      <dt>email</dt>
+      <dd><a href="mailto:theazizstark@gmail.com">theazizstark@gmail.com</a></dd>
+      <dt>deviantart</dt>
+      <dd><a href="https://www.deviantart.com/azizstark"> @azizstark</a></dd>
+      <dt>phone</dt>
+      <dd>+91-6382527775</dd>
+      <dt>Address</dt>
+      <dd>
+        <address>Madurai<br>Tamilnadu, India</address>
+    </dl>
+
+    <h2>Projects</h2>
+    <dl id="projects">
+      <dt><a href="https://github.com/AzizStark/Material-Requirement-Processing">Material Requirement Processing -</a></dt>
+      <dd> It is a webapp for calculating the materials and components needed to manufacture a product. It consists of three primary steps: taking inventory of the materials and components , identifying which additional ones are needed and then scheduling their production or purchase. It was built with Oracle18c, PHP and Bootstrap with Materialize UI.</dd>
+      <dt><a href="https://github.com/AzizStark/User-Information-System">User Identification System -</a></dt>
+      <dd>A webapp used to identify a person by using aadhar number, the entire data is stored in the database including the photos. It was built with Oracle18c, PHP and Bootstrap with Materialize UI.
+        </dd>
+    </dl>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+      // // The Firebase SDK is initialized and available here!
+      //
+      // firebase.auth().onAuthStateChanged(user => { });
+      // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+      // firebase.messaging().requestPermission().then(() => { });
+      // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+      //
+      // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+      try {
+        let app = firebase.app();
+        let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+        document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+      } catch (e) {
+        console.error(e);
+        document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+      }
+    });
+  </script>
+</body>
+
+</html>
