@@ -13,6 +13,11 @@
   text-decoration: underline;
 }
 
+#navbarItem:active {
+  background-color: #E5F2FB !important;
+  text-decoration: underline;
+}
+
 #title {
   font-family: Comfortaa;
   font-style: normal;
