@@ -8,6 +8,10 @@
   color: #e6f2fb !important;
 }
 
+#navbarItem:hover {
+  background-color: rgba(0, 5, 8, 0) !important;
+  text-decoration: underline;
+}
 
 #title {
   font-family: Comfortaa;
@@ -237,3 +241,4 @@
     margin-right: 2vw;
   }
 }
+

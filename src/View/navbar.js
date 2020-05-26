@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import cstyles from './home.module.css';
- 
+import leaf1 from '../assets/plato.svg';
+
 class Navba extends Component {
 
   constructor(props) {
@@ -33,7 +34,10 @@ class Navba extends Component {
         aria-label="main navigation"
       >
         <div className="navbar-brand" >
-
+          <a className="navbar-item" id={cstyles.navbarItem} href="#">
+            <img src={leaf1} style={{maxHeight: '2.75rem'}}/>
+          </a>
+          
           <a
             role="button"
             className={`navbar-burger burger ${this.state.burger}`}

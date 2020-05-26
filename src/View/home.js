@@ -110,17 +110,17 @@ export default class Home extends Component {
         <section id="portfolio" className={`hero is-fullheight ${cstyles.svgg}`} style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }} >
           <div className="columns is-desktop" style={{ padding: 20, paddingBottom: 0 }}>
 
-          <div class={`column ${cstyles.cluster}`}>
+          <div className={`column ${cstyles.cluster}`}>
               {box("https://res.cloudinary.com/azizcloud/image/upload/v1590315235/portfolio/d5vfhxrpvitibwnu4fqs.jpg", "Cassiopeia CMS", "A bodacious, secure, headless content management system.", [ "MongoDB", "Express JS", "React JS", "Node JS"], "https://github.com/AzizStark/CassiopeiaCMS")}
              
             </div>
-            <div class={`column ${cstyles.cluster}`}>
+            <div className={`column ${cstyles.cluster}`}>
               {box("https://res.cloudinary.com/azizcloud/image/upload/t_smallpreview/v1590258538/portfolio/fgpcgo5gor0pfwutn9fu.jpg", "Quiva - Fancy Text Generator", "A fancy text app for android for creating stylish text based on unicode characters and glyphs.", ["JavaScript", "React Native"], "https://galaxystore.samsung.com/detail/com.quiva")}
             </div>
-            <div class={`column ${cstyles.cluster}`}>
+            <div className={`column ${cstyles.cluster}`}>
               {box("https://res.cloudinary.com/azizcloud/image/upload/t_smallpreview/v1590257674/portfolio/kjksvmdctjjft5mp3tdc.jpg", "Material Requirement Processing", "A web-app for calculating the materials and components needed to manufacture a large number of products.", ["PHP", "Oracle", "Material UI"], "https://github.com/AzizStark/Material-Requirement-Processing")}
             </div>
-            <div class={`column ${cstyles.cluster}`}>
+            <div className={`column ${cstyles.cluster}`}>
               {box("https://res.cloudinary.com/azizcloud/image/upload/v1590315673/portfolio/wzqvjrhohtjmo68m8voh.png", "Desktop Widgets", "15+ Widgets for desktop with varying functionalities. Downloaded more than 100,000 times.", ["Rainmeter"], "https://www.deviantart.com/azizstark/gallery/67780296/widgets")}
             </div>
             
@@ -130,16 +130,16 @@ export default class Home extends Component {
           <div className="columns is-desktop cluster" style={{ padding: 20, paddingTop: 0 }}>
 
            
-            <div class={`column ${cstyles.cluster}`}>
+            <div className={`column ${cstyles.cluster}`}>
               {box("https://res.cloudinary.com/azizcloud/image/upload/v1590315233/portfolio/htnl1q9chykaheksucew.jpg", "Stash", "A web-based cryptographic text hasher and encrypter.", ["JavaScript", "Svelte JS", "Node JS"], "https://stash.azizstark.tech")}
             </div>
-            <div class={`column ${cstyles.cluster}`}>
+            <div className={`column ${cstyles.cluster}`}>
               {box("https://res.cloudinary.com/azizcloud/image/upload/v1590315235/portfolio/agncefcs92v7duq9xwfd.jpg", "Tech Zeal", "A website for the college symposium that was used by more than 1000 students to register for the events.", ["HTML", "JavaScript", "Firebase"],"https://gennext.web.app/")}
             </div>
-            <div class={`column ${cstyles.cluster}`}>
+            <div className={`column ${cstyles.cluster}`}>
               {box("https://res.cloudinary.com/azizcloud/image/upload/v1590315234/portfolio/u021xlqihtpanv8kckoy.jpg", "Foodie", "A front-end user interface for food ordering web-app with a smooth user experience.", ["JavaScript", "React JS"], "https://foodie.azizstark.tech")}
             </div>
-            <div class={`column ${cstyles.cluster}`}>
+            <div className={`column ${cstyles.cluster}`}>
               {box("https://res.cloudinary.com/azizcloud/image/upload/t_equla/v1590315235/portfolio/imv2i0jyhabif9k9uqhw.jpg", "Zippy", "E-Magazines consisting of articles from my college friends.", ["Figma", "Photoshop"], "https://drive.google.com/file/d/1svlPLO3_Q4nVtspJMnRiZTasUhOLaMG7/view")}
             </div>
 
@@ -190,13 +190,13 @@ export default class Home extends Component {
         {herobar('Who I am?', 'About me')}
         <section id="about" className={`hero is-fullheight ${cstyles.svgg}`} style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
           <div className="columns is-desktop" style={{ padding: '10%' }}>
-            <div className="column  has-text-centered">
-              <img alt="aziz" src={'https://res.cloudinary.com/azizcloud/image/upload/t_equla/v1581060713/portfolio/mje9zcv7jcb2yluhfhsi.png'} style={{ width: '75%', borderRadius: 30 }} />
+            <div className="column  has-text-centered" style={{ display: "flex", alignItems: "center", justifyContent: "center"}}>
+              <img alt="aziz" src={'https://res.cloudinary.com/azizcloud/image/upload/t_equla/v1590335741/portfolio/jfixlskwxiz4wwp9dfda.jpg'} style={{ width: '55%', borderRadius: 8 }} />
             </div>
             <div className="column is-three-fifths-desktop" style={{ fontFamily: 'nunito', paddingLeft: 0 }}>
               <h1 style={{ display: 'inline-block', fontSize: '2rem', color: 'rgb(28, 255, 189)', fontWeight: 500 }}>ME</h1>
               <div style={{ marginLeft: 15, display: 'inline-block', background: 'linear-gradient(91.18deg, rgb(28, 255, 189) -16.44%, rgba(46, 167, 255, 0) 107.71%)', borderRadius: 21, width: 'calc(100% - 4rem)', height: 6 }}></div>
-              <div className="content" style={{ fontSize: "calc(12px + 1vh)", fontWeight: 300, padding: 33, paddingLeft: 0, paddingRight: 0, textAlign: 'justify' }}>
+              <div className="contents" style={{ fontSize: "calc(12px + 1vh)", fontWeight: 300, padding: 33, paddingLeft: 0, paddingRight: 0, textAlign: 'justify' }}>
                 Hey! <span role="img" aria-label="wave">👋</span>I'm Aziz Rahman, I love web and mobile app development and have developed a few websites and projects️. I'm also passionate about design <span role="img" aria-label="pallete">🎨</span>. I spend my free time listening to music <span role="img" aria-label="music">🎧</span>, playing video games and surfing the internet to explore the world.
                 </div>
               <div style={{ display: 'flex', justifyContent: 'space-around' }}>
@@ -300,8 +300,8 @@ function box(imageurl, title, subtitle, stack, link) {
       
       <div style={{ height: '100%', display: 'flex' }}>
           <p style={{ alignSelf: 'flex-end', width: '100%', backgroundColor: "#A6B1C0", borderRadius: 4, marginTop: 6, color: "#131C2A", fontFamily: 'Nunito', fontWeight: 400, fontSize: "calc(9px + 0.8vh)", textAlign: 'justify', display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap' }}>          
-          {stack.map( ( text ) => 
-              <span> {text} </span>
+          {stack.map( ( text, index ) => 
+              <span key={index}> {text} </span>
           )}
           </p>
         </div>
