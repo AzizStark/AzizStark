@@ -14,8 +14,7 @@
 }
 
 #navbarItem:active {
-  background-color: #E5F2FB !important;
-  text-decoration: underline;
+  color: #00DD72 !important;
 }
 
 #title {
