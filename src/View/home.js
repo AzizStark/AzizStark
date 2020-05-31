@@ -115,7 +115,7 @@ export default class Home extends Component {
              
             </div>
             <div className={`column ${cstyles.cluster}`}>
-              {box("https://res.cloudinary.com/azizcloud/image/upload/t_equla/v1590258538/portfolio/fgpcgo5gor0pfwutn9fu.jpg", "Quiva - Fancy Text Generator", "A fancy text app for android for creating stylish text based on unicode characters and glyphs.", ["JavaScript", "React Native"], "https://galaxystore.samsung.com/detail/com.quiva")}
+              {box("https://res.cloudinary.com/azizcloud/image/upload/t_equla/v1590315236/portfolio/lxx99yyawhv5evn6mmpz.jpg", "Quiva - Fancy Text Generator", "A fancy text app for android for creating stylish text based on unicode characters and glyphs.", ["JavaScript", "React Native"], "https://galaxystore.samsung.com/detail/com.quiva")}
             </div>
             <div className={`column ${cstyles.cluster}`}>
               {box("https://res.cloudinary.com/azizcloud/image/upload/v1590315235/portfolio/pqecxwjuxinwmxak7tkw.jpg", "Material Requirement Processing", "A web-app for calculating the materials and components needed to manufacture a large number of products.", ["PHP", "Oracle", "Material UI"], "https://github.com/AzizStark/Material-Requirement-Processing")}
