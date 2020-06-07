@@ -169,7 +169,7 @@ export default class Home extends Component {
                 <ReactCompareImage leftImage={code} rightImage={hlogo} handle={<FontAwesomeIcon icon={faArrowsAltH} style={{ backgroundColor: '#e6f2fb', color: "#45364E", borderRadius: 30, padding: 10, border: 0 }} size="3x" />} sliderLineColor={'#e6f2fb'} sliderLineWidth={8} sliderPositionPercentage={0.475} />      <br />
               </div> 
               <div style={styles.flexcenter} >
-                <button id={cstyles.custombtn} className="button" onClick = { () => {window.open("https://drive.google.com/open?id=13ChPvEZ31vPNt8LajWoVamre0_Bc-JHC")}} >Download Resume</button> 
+                <button id={cstyles.custombtn} className="button" onClick = { () => {window.open("https://drive.google.com/file/d/18WN28vNfJUC10nuQkdsR4t39CcsI8Zk_/view?usp=sharing")}} >Download Resume</button> 
               </div>
             </div>
             <div className="column">
