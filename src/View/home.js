@@ -204,7 +204,7 @@ export default class Home extends Component {
                 <a style={styles.bcolor} href="https://github.com/azizstark" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className={cstyles.iclick} icon={faGithubAlt} size="2x" /></a>
                 <a style={styles.bcolor} href="https://deviantart.com/azizstark" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className={cstyles.iclick} icon={faDeviantart} size="2x" /></a>
                 <a style={styles.bcolor} href="https://dribbble.com/AzizStark" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className={cstyles.iclick} icon={faDribbble} size="2x" /></a>
-                <a style={styles.bcolor} href="https://www.instagram.com/theazizrahman/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className={cstyles.iclick} icon={faInstagram} size="2x" /></a>
+                <a style={styles.bcolor} href="https://www.instagram.com/the_pixel_dreamer" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className={cstyles.iclick} icon={faInstagram} size="2x" /></a>
                 <a style={styles.bcolor} href="https://www.linkedin.com/in/theazizrahman/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className={cstyles.iclick} icon={faLinkedinIn} size="2x" /></a>
               </div>
             </div>
