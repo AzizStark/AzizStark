@@ -95,7 +95,6 @@ export default class Home extends Component {
         <meta charSet="utf-8"></meta>
         <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700|Nunito:200,300,400,400i,600,700&display=swap" rel="stylesheet"></link>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-        <meta name="google-site-verification" content="6aahCwHLsv6Rh1xv3ly_58qZCV7qccpOZzDJT65GS00" />
         <meta name="description" content="Hello! I am Aziz Stark, An aspiring developer and designer." />
         <section className={`hero is-fullheight ${cstyles.svgg}`}>
           <Navba></Navba>
