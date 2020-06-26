@@ -34,8 +34,8 @@ class Navba extends Component {
         aria-label="main navigation"
       >
         <div className="navbar-brand" >
-          <a className="navbar-item" id={cstyles.navbarItem} href="#">
-            <img src={leaf1} style={{maxHeight: '2.75rem'}}/>
+          <a className="navbar-item" id={cstyles.navbarItem} href="# ">
+            <img src={leaf1} alt="logo" style={{maxHeight: '2.75rem'}}/>
           </a>
           
           <a
