@@ -13,6 +13,18 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faArrowsAltH, faRocket } from '@fortawesome/free-solid-svg-icons'
 import { faGithubAlt, faDeviantart, faInstagram, faLinkedinIn, faDribbble } from '@fortawesome/free-brands-svg-icons'
+import ReactGA from 'react-ga';
+
+
+ReactGA.initialize('UA-145139004-1', {
+  debug: true,
+  titleCase: false,
+  gaOptions: {
+    userId: 145139004
+  }
+});
+
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 
 export default class Home extends Component {
@@ -72,14 +84,18 @@ export default class Home extends Component {
 
 
   render() {
+
+    this.props.history.listen((location) => {
+      window.ga('set', 'page', location.pathname + location.search);
+      window.ga('send', 'pageview');
+    });
+
     return (
       <div style={{ overflow: 'Hidden' }}>
         <meta charSet="utf-8"></meta>
         <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700|Nunito:200,300,400,400i,600,700&display=swap" rel="stylesheet"></link>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <meta name="description" content="Hello! I am Aziz Stark, An aspiring developer and designer." />
-        <script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
-        <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""/></noscript>
         <section className={`hero is-fullheight ${cstyles.svgg}`}>
           <Navba></Navba>
           <div className="hero-body" >
@@ -102,7 +118,7 @@ export default class Home extends Component {
           </div>
         </section>
 
-        
+
 
         {herobar('What I built?', 'Awesome stuff')}
 
@@ -110,9 +126,9 @@ export default class Home extends Component {
         <section className={`hero is-fullheight ${cstyles.svgg}`} style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }} >
           <div id="portfolio" className="columns is-desktop" style={{ padding: 20, paddingBottom: 0 }}>
 
-          <div className={`column ${cstyles.cluster}`}>
-              {box("https://res.cloudinary.com/azizcloud/image/upload/v1590315235/portfolio/d5vfhxrpvitibwnu4fqs.jpg", "Cassiopeia CMS", "A bodacious, secure, headless content management system.", [ "MongoDB", "Express JS", "React JS", "Node JS"], "https://github.com/AzizStark/CassiopeiaCMS")}
-             
+            <div className={`column ${cstyles.cluster}`}>
+              {box("https://res.cloudinary.com/azizcloud/image/upload/v1590315235/portfolio/d5vfhxrpvitibwnu4fqs.jpg", "Cassiopeia CMS", "A bodacious, secure, headless content management system.", ["MongoDB", "Express JS", "React JS", "Node JS"], "https://github.com/AzizStark/CassiopeiaCMS")}
+
             </div>
             <div className={`column ${cstyles.cluster}`}>
               {box("https://res.cloudinary.com/azizcloud/image/upload/t_equla/v1590315236/portfolio/lxx99yyawhv5evn6mmpz.jpg", "Quiva - Fancy Text Generator", "A fancy text app for android for creating stylish text based on unicode characters and glyphs.", ["JavaScript", "React Native"], "https://galaxystore.samsung.com/detail/com.quiva")}
@@ -123,18 +139,18 @@ export default class Home extends Component {
             <div className={`column ${cstyles.cluster}`}>
               {box("https://res.cloudinary.com/azizcloud/image/upload/v1590315673/portfolio/wzqvjrhohtjmo68m8voh.png", "Desktop Widgets", "15+ Widgets for desktop with varying functionalities. Downloaded more than 100,000 times.", ["Rainmeter"], "https://www.deviantart.com/azizstark/gallery/67780296/widgets")}
             </div>
-            
+
 
           </div>
 
           <div className="columns is-desktop cluster" style={{ padding: 20, paddingTop: 0 }}>
 
-           
+
             <div className={`column ${cstyles.cluster}`}>
               {box("https://res.cloudinary.com/azizcloud/image/upload/v1590315233/portfolio/htnl1q9chykaheksucew.jpg", "Stash", "A web-based cryptographic text hasher and encrypter.", ["JavaScript", "Svelte JS", "Node JS"], "https://stash.azizstark.tech")}
             </div>
             <div className={`column ${cstyles.cluster}`}>
-              {box("https://res.cloudinary.com/azizcloud/image/upload/v1590315235/portfolio/agncefcs92v7duq9xwfd.jpg", "Tech Zeal", "A website for the college symposium that was used by more than 1000 students to register for the events.", ["HTML", "JavaScript", "Firebase"],"https://gennext.web.app/")}
+              {box("https://res.cloudinary.com/azizcloud/image/upload/v1590315235/portfolio/agncefcs92v7duq9xwfd.jpg", "Tech Zeal", "A website for the college symposium that was used by more than 1000 students to register for the events.", ["HTML", "JavaScript", "Firebase"], "https://gennext.web.app/")}
             </div>
             <div className={`column ${cstyles.cluster}`}>
               {box("https://res.cloudinary.com/azizcloud/image/upload/v1590315234/portfolio/u021xlqihtpanv8kckoy.jpg", "Foodie", "A front-end user interface for food ordering web-app with a smooth user experience.", ["JavaScript", "React JS"], "https://foodie.azizstark.tech")}
@@ -162,14 +178,14 @@ export default class Home extends Component {
               <h2 style={styles.stext}>Python</h2>
               <progress style={{ height: 5, marginBottom: 10 }} className="progress is-small is-success" value="88" max="100"></progress>
               <h2 style={styles.stext}>Java</h2>
-              <progress style={{ height: 5 }} class="progress is-small is-success" value="82" max="100"></progress>
+              <progress style={{ height: 5 }} className="progress is-small is-success" value="82" max="100"></progress>
             </div>
-            <div className="column is-half-desktop" style={{ display: 'flex',justifyContent: 'center', flexDirection: 'column' }}>
-              <div className="container" style={{ width: '100%', display: 'flex',justifyContent: 'center', flexDirection: 'column' }}>
+            <div className="column is-half-desktop" style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
+              <div className="container" style={{ width: '100%', display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
                 <ReactCompareImage leftImage={code} rightImage={hlogo} handle={<FontAwesomeIcon icon={faArrowsAltH} style={{ backgroundColor: '#e6f2fb', color: "#45364E", borderRadius: 30, padding: 10, border: 0 }} size="3x" />} sliderLineColor={'#e6f2fb'} sliderLineWidth={8} sliderPositionPercentage={0.475} />      <br />
-              </div> 
+              </div>
               <div style={styles.flexcenter} >
-                <button id={cstyles.custombtn} className="button" onClick = { () => {window.open("https://drive.google.com/file/d/15f7Z9nSsu-vFBsygGzGQ2wUnqPQow0pa/view?usp=sharing")}} >Download Resume</button> 
+                <button id={cstyles.custombtn} className="button" onClick={() => { window.open("https://drive.google.com/file/d/15f7Z9nSsu-vFBsygGzGQ2wUnqPQow0pa/view?usp=sharing") }} >Download Resume</button>
               </div>
             </div>
             <div className="column">
@@ -177,11 +193,11 @@ export default class Home extends Component {
               <h2 style={{ fontFamily: 'Nunito', fontWeight: 300, fontSize: "calc(12px + 0.8vh)", textAlign: 'justify' }}>I believe in simplicity, clarity and always loves minimalism. These facts allow me to create designs smoother than a baby’s bottom. </h2>
               <br />
               <h2 style={styles.stext}>Figma</h2>
-              <progress style={{ height: 5, marginBottom: 10 }} class="progress is-small is-success" value="96" max="100"></progress>
+              <progress style={{ height: 5, marginBottom: 10 }} className="progress is-small is-success" value="96" max="100"></progress>
               <h2 style={styles.stext}>Illustrator</h2>
-              <progress style={{ height: 5, marginBottom: 10 }} class="progress is-small is-success" value="86" max="100"></progress>
+              <progress style={{ height: 5, marginBottom: 10 }} className="progress is-small is-success" value="86" max="100"></progress>
               <h2 style={styles.stext}>Photoshop</h2>
-              <progress style={{ height: 5 }} class="progress is-small is-success" value="92" max="100"></progress>
+              <progress style={{ height: 5 }} className="progress is-small is-success" value="92" max="100"></progress>
             </div>
           </div>
         </section>
@@ -190,7 +206,7 @@ export default class Home extends Component {
         {herobar('Who I am?', 'About me')}
         <section id="about" className={`hero is-fullheight ${cstyles.svgg}`} style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
           <div className="columns is-desktop" style={{ padding: '10%' }}>
-            <div className="column  has-text-centered" style={{ display: "flex", alignItems: "center", justifyContent: "center"}}>
+            <div className="column  has-text-centered" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
               <img alt="aziz" src={'https://res.cloudinary.com/azizcloud/image/upload/t_equla/v1590335741/portfolio/jfixlskwxiz4wwp9dfda.jpg'} style={{ width: '55%', borderRadius: 8 }} />
             </div>
             <div className="column is-three-fifths-desktop" style={{ fontFamily: 'nunito', paddingLeft: 0 }}>
@@ -213,32 +229,32 @@ export default class Home extends Component {
 
         {herobar('Want to talk?', 'Contact me')}
         <section id="contact" className={`hero is-fullheight ${cstyles.svgg}`} style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
-          <div class="columns is-desktop">
-            <div class="column is-half-desktop has-text-left " style={{ fontFamily: 'Nunito', fontWeight: 500, margin: 'auto', color: '#ffffff', paddingRight: '10%', paddingLeft: '10%' }}>
-            
+          <div className="columns is-desktop">
+            <div className="column is-half-desktop has-text-left " style={{ fontFamily: 'Nunito', fontWeight: 500, margin: 'auto', color: '#ffffff', paddingRight: '10%', paddingLeft: '10%' }}>
+
               <form className="contact-form" onSubmit={this.sendEmail}>
-                <div class="field">
-              
+                <div className="field">
+
                   <label>Name</label>
-                  <div class="control">
-                    <input class="input is-medium" name="user_name" type="text" style={styles.input} required />
+                  <div className="control">
+                    <input className="input is-medium" name="user_name" type="text" style={styles.input} required />
                   </div>
                 </div>
-            
-                <div class="field">
+
+                <div className="field">
                   <label>Email</label>
-                  <div class="control">
-                    <input class="input is-medium" type="email" name="user_email" style={styles.input} required />
+                  <div className="control">
+                    <input className="input is-medium" type="email" name="user_email" style={styles.input} required />
                   </div>
                 </div>
-            
-                <div class="field">
+
+                <div className="field">
                   <label >Message</label>
-                  <div class="control">
-                    <textarea class="textarea is-medium" name="message" style={styles.input} required></textarea>
+                  <div className="control">
+                    <textarea className="textarea is-medium" name="message" style={styles.input} required></textarea>
                   </div>
                 </div>
-            
+
                 <div style={styles.flexcenter}>
                   <ReCAPTCHA
                     sitekey="6LcHgMkUAAAAAFJHIMlbY2m2N0wSchYl5Ga2wJXU"
@@ -246,7 +262,7 @@ export default class Home extends Component {
                     onChange={this.setCaptcha}
                   />
                 </div><br />
-                <div class="control">
+                <div className="control">
                   <button type="submit" value="Send" id={this.state.butStyle} className="button is-fullwidth has-text-weight-medium is-medium">{this.state.sendinfo}</button>
                 </div>
               </form>
@@ -254,9 +270,9 @@ export default class Home extends Component {
           </div>
         </section>
 
-        <footer class="footer" style={{ backgroundColor: '#152636', color: '#ffffff', padding: '2%' }}>
+        <footer className="footer" style={{ backgroundColor: '#152636', color: '#ffffff', padding: '2%' }}>
           <div className="columns">
-            <div class="column has-text-centered">
+            <div className="column has-text-centered">
               <p style={{ fontFamily: 'Nunito', fontWeight: 400, color: 'rgb(28, 255, 189)', fontSize: "calc(12px + 0.3vh)" }}>
                 Content and Graphics © 2020 AzizStark
             </p>
@@ -286,25 +302,25 @@ function herobar(head, subhead) {
 }
 
 function box(imageurl, title, subtitle, stack, link) {
-  return ( 
-    <div className="container" style={{padding: 8, background: "#25364E", borderRadius: 6, height: '100%', display: 'flex', flexDirection: 'column' }} >                
+  return (
+    <div className="container" style={{ padding: 8, background: "#25364E", borderRadius: 6, height: '100%', display: 'flex', flexDirection: 'column' }} >
       <div className="imghvr-blur">
-          <img alt="project" style={{borderRadius: 4, objectFit: 'contain'}}  src = {imageurl}/>
-          <figcaption style={{ padding: 20, fontSize: 'calc(10px + 0.6vw)', fontFamily: 'nunito' }}>
-            <a style={styles.bcolor} href={link} target="_blank" rel="noopener noreferrer" ><FontAwesomeIcon className={cstyles.iclick} icon={faRocket} size="2x" /></a>
-          </figcaption>
+        <img alt="project" style={{ borderRadius: 4, objectFit: 'contain' }} src={imageurl} />
+        <figcaption style={{ padding: 20, fontSize: 'calc(10px + 0.6vw)', fontFamily: 'nunito' }}>
+          <a style={styles.bcolor} href={link} target="_blank" rel="noopener noreferrer" ><FontAwesomeIcon className={cstyles.iclick} icon={faRocket} size="2x" /></a>
+        </figcaption>
       </div>
       <p style={{ color: "#1CFFBD", fontFamily: 'Nunito', fontWeight: 300, fontSize: "calc(12px + 0.8vh)", marginTop: 6 }}> {title} </p>
       <div style={{ borderTop: "1px dashed #109E75", marginTop: 6, marginBottom: 6 }}></div>
       <p style={{ color: "#E5F2FB", fontFamily: 'Nunito', fontWeight: 300, fontSize: "calc(0.8vh + 0.4vw * 2px)" }}>{subtitle}</p>
-      
+
       <div style={{ height: '100%', display: 'flex' }}>
-          <p style={{ alignSelf: 'flex-end', width: '100%', backgroundColor: "#A6B1C0", borderRadius: 4, marginTop: 6, color: "#131C2A", fontFamily: 'Nunito', fontWeight: 400, fontSize: "calc(9px + 0.8vh)", textAlign: 'justify', display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap' }}>          
-          {stack.map( ( text, index ) => 
-              <span key={index}> {text} </span>
+        <p style={{ alignSelf: 'flex-end', width: '100%', backgroundColor: "#A6B1C0", borderRadius: 4, marginTop: 6, color: "#131C2A", fontFamily: 'Nunito', fontWeight: 400, fontSize: "calc(9px + 0.8vh)", textAlign: 'justify', display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap' }}>
+          {stack.map((text, index) =>
+            <span key={index}> {text} </span>
           )}
-          </p>
-        </div>
+        </p>
+      </div>
     </div>
   )
 }

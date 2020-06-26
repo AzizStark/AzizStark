@@ -1,18 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, BrowserRouter as Router } from 'react-router-dom';
+import { Route, BrowserRouter as Router} from 'react-router-dom';
 import './index.css';
-import App from './App';
+import { createBrowserHistory } from 'history';
 import Home from './View/home';
 import * as serviceWorker from './serviceWorker';
+
+var history = createBrowserHistory();
 
 const routing = (
   <Router>
     <div>
-      <Route exact path="/" component={Home} />
+      <Route exact path="/" component={Home} history={history}/>
     </div>
   </Router>
 )
+
 
 ReactDOM.render(routing , document.getElementById('root'));
 
