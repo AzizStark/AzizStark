@@ -203,7 +203,7 @@ export default class Home extends Component {
         </section>
 
 
-        {herobar('Who am I?', 'I'm Aziz')}
+        {herobar('Who am I?', "I'm Aziz")}
         <section id="about" className={`hero is-fullheight ${cstyles.svgg}`} style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
           <div className="columns is-desktop" style={{ padding: '10%' }}>
             <div className="column  has-text-centered" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
