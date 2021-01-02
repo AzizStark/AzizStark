@@ -274,7 +274,7 @@ export default class Home extends Component {
           <div className="columns">
             <div className="column has-text-centered">
               <p style={{ fontFamily: 'Nunito', fontWeight: 400, color: 'rgb(28, 255, 189)', fontSize: "calc(12px + 0.3vh)" }}>
-                Content and Graphics © 2020 AzizStark
+                Content and Graphics © 2021 AzizStark
             </p>
             </div>
           </div>
