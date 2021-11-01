@@ -16,6 +16,9 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-offline",
+    "gatsby-plugin-react-helmet",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",

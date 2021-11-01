@@ -1,0 +1,21 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+@import "./variables.scss";
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Manrope", "Calibre", georgia, serif;
+  letter-spacing: 0.62px;
+}
+
+main {
+  min-height: 100vh;
+}
+
+p {
+  margin: 0px;
+}
