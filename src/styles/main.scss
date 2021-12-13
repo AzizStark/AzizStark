@@ -1,6 +1,7 @@
 @import "./colors.scss";
 @import "./fonts.scss";
 @import "./variables.scss";
+@import "./animations.scss";
 
 html,
 body {
@@ -10,6 +11,7 @@ body {
   margin: 0;
   font-family: "Manrope", "Calibre", georgia, serif;
   letter-spacing: 0.62px;
+  background-color: var(--theme-background-color);
 }
 
 main {

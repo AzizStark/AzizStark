@@ -1,4 +1,5 @@
 import React from "react";
+import { FontWeight } from "../constants/typography";
 import styled from "styled-components";
 import { TextColors } from "../constants/colors";
 import Container, { ContainerProps } from "./fragments/container";
@@ -11,11 +12,16 @@ const Header: React.FC = () => {
         <Text color={TextColors.color1}>Aziz Stark</Text>
       </Container>
       <Container padding={"25px"}>
+        <Text color={TextColors.color1} fontWeight={FontWeight.semibold}>
+          SITE WORK-IN-PROGRESS
+        </Text>
+      </Container>
+      {/* <Container padding={"25px"}>
         <HeaderText>About</HeaderText>
         <HeaderText>Work</HeaderText>
         <HeaderText>Blog</HeaderText>
         <HeaderText>Contact</HeaderText>
-      </Container>
+      </Container> */}
     </HeaderContainer>
   );
 };

@@ -4,7 +4,7 @@ import { BackgroundColors } from "../../constants/colors";
 
 const Container = styled.div<ContainerProps>`
   display: flex;
-  flex: ${(props) => props.flex && props.flex};
+  flex: ${(props) => props.flex};
   align-items: ${(props) => (props.align ? props.align : "center")};
   justify-content: ${(props) => (props.justify ? props.justify : "center")};
   flex-direction: ${(props) => props.row && "row"};
