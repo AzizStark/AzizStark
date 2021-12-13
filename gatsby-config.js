@@ -36,5 +36,12 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-plugin-s3",
+      options: {
+        bucketName: "azizstark",
+        acl: null
+      },
+    },
   ],
 };
