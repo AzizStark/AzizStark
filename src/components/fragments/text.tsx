@@ -9,6 +9,7 @@ const Text = styled.p<TextProps>`
   font-size: ${(props) => props.fontSize};
   font-weight: ${(props) => props.fontWeight};
   color: ${(props) => props.color};
+  opacity: ${(props) => props.opacity};
   font-family: ${(props) => props.primaryFont && FontFamily.primary};
   font-family: ${(props) => props.secondaryFont && FontFamily.secondary};
 `;
@@ -29,6 +30,7 @@ export interface TextProps {
   fontWeight?: number;
   primaryFont?: boolean;
   secondaryFont?: boolean;
+  opacity?: number;
   theme: {
     font: {
       weight: typeof FontWeight;

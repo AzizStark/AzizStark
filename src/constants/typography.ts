@@ -9,9 +9,9 @@ export enum FontSize {
   small = "12px",
   medium = "16px",
   normal = "18px",
-  large = "20px",
-  xl = "50px",
-  xxl = "100px",
+  large = "calc(.4vw + 14px)",
+  xl = "clamp(20px, 4vw, 50px);",
+  xxl = "clamp(40px, 7vw, 100px);",
 }
 
 export enum FontWeight {

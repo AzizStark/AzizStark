@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { FontSize, FontWeight } from "../constants/typography";
 import { TextColors } from "../constants/colors";
@@ -8,23 +8,34 @@ import Text, { TextProps } from "./fragments/text";
 import Img from "../images/Glow.png";
 import Keys from "../images/Keys.png";
 import { AlignItem, JustifyContent } from "../constants/flexbox";
+import { smoothDropAnimate } from "../utils/animations";
 
 const Hero: React.FC = () => {
+  useEffect(() => {
+    smoothDropAnimate(".animated-text", 2200);
+  }, []);
+
   return (
     <Section>
       <Container flex={4} fullHeight fullWidth>
         <GradientBackground src={Img} />
         <Container align={AlignItem.flexStart} column>
-          <Text color={TextColors.color2} fontSize={FontSize.large} fontWeight={FontWeight.light} secondaryFont>
+          <Text
+            className={"animated-text"}
+            color={TextColors.color2}
+            fontSize={FontSize.large}
+            fontWeight={FontWeight.light}
+            secondaryFont
+          >
             Hi there, I’m
           </Text>
-          <Text color={TextColors.white} fontSize={FontSize.xxl}>
+          <Text className={"animated-text"} color={TextColors.white} fontSize={FontSize.xxl}>
             Aziz Rahman
           </Text>
-          <Text color={TextColors.color1} fontSize={FontSize.xl}>
+          <Text className={"animated-text"} color={TextColors.color1} fontSize={FontSize.xl}>
             Developer + Designer
           </Text>
-          <Container margin="30px 0px 0px 0px">
+          <Container className={"animated-text"} margin="30px 0px 0px 0px">
             <Text color={TextColors.color3} fontSize={FontSize.large} fontWeight={FontWeight.light} secondaryFont>
               I’m a full-stack engineer with experience in design and development of user-centered web and mobile
               applications. I am also focussing on mastering UI/UX design. Currently, I’m working on building cloud
@@ -33,8 +44,8 @@ const Hero: React.FC = () => {
           </Container>
         </Container>
       </Container>
-      <Container justify={JustifyContent.flexEnd} flex={3} fullHeight fullWidth>
-        <img src={Keys} width={500} />
+      <Container id="keyboard-img-container" justify={JustifyContent.flexEnd} flex={3} fullHeight fullWidth>
+        <KeyboardImage src={Keys} width={839} height={653} />
       </Container>
     </Section>
   );
@@ -54,6 +65,11 @@ const CompanyName = styled(Text).attrs(() => ({
 }))`
   color: ${(props: TextProps) => props.theme.colors.color2};
   text-decoration: none;
+`;
+
+const KeyboardImage = styled.img`
+  max-width: 30vw;
+  object-fit: contain;
 `;
 
 export default Hero;

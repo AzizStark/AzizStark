@@ -1,27 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FontWeight } from "../constants/typography";
 import styled from "styled-components";
 import { TextColors } from "../constants/colors";
 import Container, { ContainerProps } from "./fragments/container";
 import Text, { TextProps } from "./fragments/text";
+import { smoothDropAnimate } from "../utils/animations";
 
 const Header: React.FC = () => {
+  useEffect(() => {
+    smoothDropAnimate("#name", 1000);
+    smoothDropAnimate(".animated-text", 1200);
+  }, []);
+
   return (
     <HeaderContainer fullWidth>
       <Container padding={"25px"}>
-        <Text color={TextColors.color1}>Aziz Stark</Text>
-      </Container>
-      <Container padding={"25px"}>
-        <Text color={TextColors.color1} fontWeight={FontWeight.semibold}>
-          SITE WORK-IN-PROGRESS
+        <Text id="name" color={TextColors.color1}>
+          Aziz Stark
         </Text>
       </Container>
-      {/* <Container padding={"25px"}>
-        <HeaderText>About</HeaderText>
-        <HeaderText>Work</HeaderText>
-        <HeaderText>Blog</HeaderText>
-        <HeaderText>Contact</HeaderText>
-      </Container> */}
+      <Container padding={"25px"}>
+        <HeaderText fontWeight={FontWeight.semibold} link="#">
+          WIP 🛠️
+        </HeaderText>
+        <HeaderText link={"https://deviantart.com/"}>Works</HeaderText>
+        <HeaderText link={"https://azizstarkblog.herokuapp.com/blog/"}>Blog</HeaderText>
+        <HeaderText link={"https://bio.azizstark.com/"}>Contact</HeaderText>
+      </Container>
     </HeaderContainer>
   );
 };
@@ -33,11 +38,20 @@ const HeaderContainer = styled(Container)`
   justify-content: ${(props: ContainerProps) => props.theme.justifyContent.spaceBetween};
 `;
 
-const HeaderText = styled(Text)`
+const HeaderText = styled(Text).attrs((props: { link: string }) => ({
+  className: "animated-text",
+  onClick: () => {
+    window.open(props.link, "_blank");
+  },
+}))<{ link: string }>`
   font-size: ${(props: TextProps) => props.theme.font.size.medium};
   color: ${(props: TextProps) => props.theme.colors.color1};
   font-weight: ${(props: TextProps) => props.theme.font.weight.light};
   margin-right: 3vw;
+  :hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
   :last-child {
     margin-right: 0px;
   }

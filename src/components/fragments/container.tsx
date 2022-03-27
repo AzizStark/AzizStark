@@ -11,8 +11,8 @@ const Container = styled.div<ContainerProps>`
   flex-direction: ${(props) => props.column && "column"};
   padding: ${(props) => props.padding || "0px"};
   margin: ${(props) => props.margin || "0px"};
-  width: ${(props) => props.fullWidth && "100%"};
-  height: ${(props) => props.fullHeight && "100%"};
+  height: ${(props) => props.height || (props.fullHeight && "100%")};
+  width: ${(props) => props.width || (props.fullWidth && "100%")};
 `;
 
 Container.defaultProps = {
@@ -32,7 +32,9 @@ export interface ContainerProps {
   bgColor?: string;
   column?: boolean;
   row?: boolean;
+  width?: string;
   fullWidth?: boolean;
+  height?: string;
   fullHeight?: boolean;
   theme: {
     bgColor: typeof BackgroundColors;

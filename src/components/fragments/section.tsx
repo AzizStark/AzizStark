@@ -8,7 +8,7 @@ const Section = styled.div`
   background: ${BackgroundColors.primary};
   max-width: 100vw;
   height: 100vh;
-  padding: 0px 200px;
+  padding: 0px 10vw;
 `;
 
 export default Section;

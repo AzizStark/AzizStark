@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
+    "animejs": "^3.2.1",
     "babel-plugin-styled-components": "^1.13.3",
     "gatsby": "^4.0.0",
     "gatsby-plugin-google-analytics": "^4.0.0",
