@@ -1,12 +1,14 @@
 import anime from "animejs";
+import { YAnimAxis } from "../enums/anims";
 
-export const smoothDropAnimate = (targets: string, delay: number) => {
+export const smoothDropAnimate = (targets: string, delay: number, axis: YAnimAxis) => {
   anime({
     targets,
     duration: 1000,
     delay: anime.stagger(100, { start: delay }),
     opacity: [0, 1],
-    translateY: ["100px", "0px"],
+    translateY: axis === YAnimAxis.top ? ["50px", "0px"] : ["-50px", "0px"],
+    easing: "easeInOutExpo",
   });
 };
 

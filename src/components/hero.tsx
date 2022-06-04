@@ -9,10 +9,11 @@ import Img from "../images/Glow.png";
 import Keys from "../images/Keys.png";
 import { AlignItem, JustifyContent } from "../constants/flexbox";
 import { smoothDropAnimate } from "../utils/animations";
+import { YAnimAxis } from "../enums/anims";
 
 const Hero: React.FC = () => {
   useEffect(() => {
-    smoothDropAnimate(".animated-text", 2200);
+    smoothDropAnimate(".hero-animated-text", 2200, YAnimAxis.top);
   }, []);
 
   return (
@@ -21,7 +22,7 @@ const Hero: React.FC = () => {
         <GradientBackground src={Img} />
         <Container align={AlignItem.flexStart} column>
           <Text
-            className={"animated-text"}
+            className={"hero-animated-text"}
             color={TextColors.color2}
             fontSize={FontSize.large}
             fontWeight={FontWeight.light}
@@ -29,13 +30,13 @@ const Hero: React.FC = () => {
           >
             Hi there, I’m
           </Text>
-          <Text className={"animated-text"} color={TextColors.white} fontSize={FontSize.xxl}>
+          <Text className={"hero-animated-text"} color={TextColors.white} fontSize={FontSize.xxl}>
             Aziz Rahman
           </Text>
-          <Text className={"animated-text"} color={TextColors.color1} fontSize={FontSize.xl}>
+          <Text className={"hero-animated-text"} color={TextColors.color1} fontSize={FontSize.xl}>
             Developer + Designer
           </Text>
-          <Container className={"animated-text"} margin="30px 0px 0px 0px">
+          <Container className={"hero-animated-text"} margin="30px 0px 0px 0px">
             <Text color={TextColors.color3} fontSize={FontSize.large} fontWeight={FontWeight.light} secondaryFont>
               I’m a full-stack engineer with experience in design and development of user-centered web and mobile
               applications. I am also focussing on mastering UI/UX design. Currently, I’m working on building cloud
